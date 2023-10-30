@@ -9,13 +9,9 @@ let result = document.querySelector('#result');
 form.addEventListener('submit', showPrompt);
 
 
-
-
 function showPrompt(e){
     let text = prompt("Text you want to check: ");
-
     checkText(category.value, text);
-
     e.preventDefault();
 }
 
@@ -34,7 +30,6 @@ function checkText(category, text){
         regex = /0[1-9]\d{9}/;
     else if(category == 'post_code')
         regex = /^\d{5}$/;
-
 
     if(regex.test(text))
         // result.innerText = "Matched";
