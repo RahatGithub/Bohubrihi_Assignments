@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Expression validator</title>
+    <style>
+        #category_label, #category, .btn
+        {
+            font-size: 25px;
+        }
+        .aDiv{
+            height: 300px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body class="bg-dark">
+    <div class="d-flex justify-content-center align-items-center m-5">
+        <div class="bg-light p-5 aDiv">
+            <form action="" id="form">
+                <label for="text" id="category_label">Select a category:</label>
+                <select id="category" name="category" class="form-control">
+                    <option value="email">Email</option>
+                    <option value="phone">Phone Number</option>
+                    <option value="post_code">Post Code</option>
+                </select>
+                <br>
+                <div class="d-flex justify-content-center mt-5">
+                    <input type="submit" value="Submit" class="btn btn-primary w-100">  
+                </div>
+            </form>
+        </div>
+        <div class="bg-light p-5 ml-3 aDiv">
+            <h3>Selected Category: <b><i id="selected_category"></i></b></h3>
+            <h3>Input Text: <b><i id="input_text"></i></b></h3>
+            <h3 class="mt-5">Result: <b id="result"></b></h3>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
